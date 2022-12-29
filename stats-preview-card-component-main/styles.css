@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+
+    /*BACKGROUND COLORS AND ACCENT */
+
+    --main-bg-blue: hsl(233, 47%, 7%);
+    --card-bg-blue: hsl(244, 38%, 16%); 
+    --accent: hsl(277, 64%, 61%); 
+
+    /* COLOR FOR FONTS  */
+
+    --main-head-stat: hsl(0, 0%, 100%); 
+    --main-parag: hsla(0, 0%, 100%, 0.75); 
+    --stat-head: hsla(0, 0%, 100%, 0.6); 
+}
+
+
+body {
+    margin: 0;
+    padding: 0; 
+    height: 100vh;
+    min-height: 100vh;
+    
+    box-sizing: border-box;
+    background-color: var(--main-bg-blue);
+    font-size: 14px;
+    
+}
+
+.container {
+    width: 70%; 
+    min-width: 600px;
+    margin: auto;
+    align-items: center;
+    min-height: 100vh; 
+    display: flex;
+    flex-wrap: wrap;  
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.card {
+    width: 50%;
+    height: 350px;
+    
+}
+
+#textholder {
+    background-color: var(--card-bg-blue);
+    border-radius: 10px 0px 0px 10px;
+    padding: 30px 40px 40px 40px; 
+    box-sizing: border-box;
+    max-height: max-content; 
+    
+}
+    #textholder h1 {
+        font-family: 'Inter', 'courier new';   
+        font-weight: 700; 
+        font-size: 28px;
+        color: var(--main-head-stat);
+        
+    }
+
+    .purpletxt {
+        color: var(--accent);
+    }
+
+    #textholder p {
+        font-family: 'Inter', 'Courier New';
+        font-weight: 400;
+        font-size: 13px;
+        padding-right:40px;
+        color: var(--main-parag); 
+        }
+
+#imageholder {
+    background-image: url(images/image-header-desktop.jpg);
+    background-color:hsl(277, 64%, 61%);
+    background-blend-mode:multiply;
+    background-size:cover;
+    border-radius: 0px 10px 10px 0px;
+    box-sizing: border-box;
+}
+
+.rating {
+    color: var (--main-parag);
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* gap: 10px;  */
+    width: 100%; 
+    margin-top: 30px;
+    padding-right: -40px;
+
+}
+
+    .rating div {
+        width: 30%; 
+    }
+
+    .rating h2 {
+        font-family: 'Inter', 'Courier New';
+        font-weight: 700; 
+        font-size: 17px;
+        color: var(--main-parag);
+        margin-bottom: -5px;
+    }
+
+    #tags {
+        font-size: 10px;
+        color: var(--stat-head);
+    }
+
+
+.attribution { 
+    font-size: 11px; 
+    color: var(--main-parag);
+    text-align: center; 
+    margin-top: -10vh;
+}
+    .attribution a { 
+        color: hsl(228, 45%, 44%); 
+        text-decoration: none; 
+    }
+ 
+
+/*BREAKPOINT FOR MOBILE SCREEN */
+
+@media screen and (max-width: 600px) {
+    .container {
+        display: block; 
+        flex-direction: column; 
+        flex-wrap: unset; 
+        margin: auto; 
+        width: 90%; 
+        min-width: 350px; 
+        align-items: center; 
+    }
+
+    .card {
+        width: 90%; 
+        margin: auto; 
+        box-sizing: border-box; 
+    }
+
+    #textholder {
+        border-radius: 0px 0px 10px 10px; 
+    }
+        #textholder h1 {
+            margin-top: -20px; 
+        }
+
+    #imageholder {
+        border-radius: 10px 10px 0px 0px; 
+    }
+
+    .rating {
+        margin-bottom: 30px; 
+    }
+
+    #textholder p {
+        padding: 0; 
+    }
+
+    h1, h2, p {
+        text-align: center; 
+    }
+}
